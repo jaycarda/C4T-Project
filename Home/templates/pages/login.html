@@ -1,0 +1,64 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Prostep{% endblock  %}
+
+{% block content %}
+{% load static %}
+        <center>
+		<div class="container-login100">
+			<div class="wrap-login100" style="width: 30%; margin-right: -50%">
+				<form class="login100-form validate-form" method="POST">
+				{% csrf_token %}
+					<span class="login100-form-title p-b-26">
+						Welcome to Prostep
+					</span>
+					<span class="login100-form-title p-b-48">
+						<img src='{% static "images/logo.png" %}' width="70" height="70">
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" placeholder="Username" required>
+						<span class="focus-input100" ></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+
+						<input class="input100" type="password" placeholder="Password" name="password" required>
+						<span class="focus-input100" ></span>
+					</div>
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Forghot password?
+						</span>
+
+						<a class="txt2" href="{% url 'password_reset' %}">
+							click here
+						</a>
+					</div>
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
+
+					<div class="text-center p-t-115">
+						<span class="txt1">
+							Don’t have an account?
+						</span>
+
+						<a class="txt2" href="{% url 'register' %}">
+							Sign Up
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	<div id="dropDownSelect1"></div>
+        </center>
+{% endblock %}

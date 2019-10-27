@@ -1,0 +1,111 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Prostep{% endblock  %}
+
+{% block content %}
+{% load staticfiles %}
+        <center>
+		<div class="container-login100">
+			<div class="wrap-login100" style="width: 40%">
+				<form class="login100-form validate-form" method="POST" action="/">
+				{% csrf_token %}
+					<span class="login100-form-title p-b-26">
+						Signup
+					</span>
+					<span class="login100-form-title p-b-48">
+						<img src='{% static "images/logo.png" %}' width="70" height="70">
+					</span>
+					<div class="wrap-input100 validate-input" data-validate = "Enter email">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100" ></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100" ></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+
+						<input class="input100" type="password" placeholder="Password" name="password1">
+						<span class="focus-input100" ></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+
+						<input class="input100" type="password" placeholder="Re-enter password" name="password2">
+						<span class="focus-input100" ></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<div id="dropDownSelect1"></div>
+        </center>
+    		<div class="container-login100">
+			<div class="wrap-login100" style="width: 40%">
+				<form class="login100-form validate-form" method="POST">
+				{% csrf_token %}
+					<span class="login100-form-title p-b-26">
+						Signup
+					</span>
+					<span class="login100-form-title p-b-48">
+						<img src='{% static "images/logo.png" %}' width="70" height="70">
+					</span>
+
+                    <div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="email" name="email" required>
+						<span class="focus-input100" data-placeholder="Email"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" required>
+						<span class="focus-input100" data-placeholder="Username"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass" onclick="btnShowPass()">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+
+						<input class="input100" type="password" name="password1" id="pws" required>
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter password">
+						<span class="btn-show-pass" onclick="btnShowPass()">
+							<i class="zmdi zmdi-eye"></i>
+						</span>
+
+						<input class="input100" type="password" name="password2" id="pws" required>
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Login
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	<div id="dropDownSelect1"></div>
+</center>
+{% endblock %}

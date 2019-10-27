@@ -1,0 +1,12 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}Prostep{% endblock  %}
+
+{% block content %}
+{% load static %}
+<form method='POST'>
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">SUBMIT</button>
+</form>
+{% endblock %}
